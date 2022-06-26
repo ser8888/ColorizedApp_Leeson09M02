@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  HomeWork Module 2 Leaaon 4
+//  HomeWork Module 2 Lesson 4
 //
-//  Created by John Doe on 26/06/2022.
+//  Created by Sergejs Tiselskis on 26/06/2022.
 //
 
 import UIKit
@@ -19,43 +19,31 @@ class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         mainViewPanel.layer.cornerRadius = 25
         setupAllSliders()
         setupAllLabels()
-        
-        
-        
-        
     }
 //MARK: - IB Auctions
     
     @IBAction func redSliderAction() {
         redLabelField.text = "\(String(format: "%.2f",redSlider.value))"
+        changeMainPanelColor()
     }
     @IBAction func greenSliderAction() {
         greenLabelField.text = "\(String(format: "%.2f", greenSlider.value))"
+        changeMainPanelColor()
     }
     @IBAction func blueSliderAuction() {
         blueLabelField.text = "\(String(format: "%.2f", blueSlider.value))"
+        changeMainPanelColor()
     }
-    
-    
-    
-    
 //MARK: - Private Methodes
 
     private func setupAllSliders() {
-        redSlider.minimumValue = 0
-        redSlider.maximumValue = 1
         redSlider.minimumTrackTintColor = .red
-        
-        greenSlider.minimumValue = 0
-        greenSlider.maximumValue = 1
         greenSlider.minimumTrackTintColor = .green
-        
         blueSlider.minimumTrackTintColor = .blue
     }
     
@@ -65,7 +53,9 @@ class ViewController: UIViewController {
         blueLabelField.text = String(blueSlider.value)
     }
     
-    
-    
+    private func changeMainPanelColor() {
+        let color = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        mainViewPanel.backgroundColor = color
+    }
 }
 
