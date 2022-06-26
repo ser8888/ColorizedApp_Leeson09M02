@@ -23,50 +23,59 @@
                                     <constraint firstAttribute="height" constant="127" id="Tlv-fk-cti"/>
                                 </constraints>
                             </view>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="T8L-vn-Gyi">
-                                <rect key="frame" x="126" y="271" width="274" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.050000000000000003" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="T8L-vn-Gyi">
+                                <rect key="frame" x="131" y="271" width="269" height="31"/>
+                                <connections>
+                                    <action selector="redSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="7Sg-7u-Ifn"/>
+                                </connections>
                             </slider>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Red" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2AM-tp-4KC">
-                                <rect key="frame" x="16" y="271" width="32" height="22"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Red:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2AM-tp-4KC">
+                                <rect key="frame" x="16" y="271" width="37" height="22"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Green" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7F-qv-dSl">
-                                <rect key="frame" x="16" y="323" width="49" height="22"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Green:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7F-qv-dSl">
+                                <rect key="frame" x="16" y="323" width="54" height="22"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcY-CN-Ank">
-                                <rect key="frame" x="70" y="323" width="44" height="22"/>
+                                <rect key="frame" x="75" y="323" width="44" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Blue" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pU4-FQ-R2h">
-                                <rect key="frame" x="16" y="375" width="36" height="22"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Blue:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pU4-FQ-R2h">
+                                <rect key="frame" x="16" y="375" width="41" height="22"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XHl-IZ-2Yh">
-                                <rect key="frame" x="126" y="367" width="274" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.47999999999999998" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XHl-IZ-2Yh">
+                                <rect key="frame" x="131" y="367" width="269" height="31"/>
+                                <connections>
+                                    <action selector="blueSliderAuction" destination="BYZ-38-t0r" eventType="valueChanged" id="AME-Hb-2QZ"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbn-Pc-QYv">
-                                <rect key="frame" x="70" y="375" width="44" height="22"/>
+                                <rect key="frame" x="75" y="375" width="44" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ZS-c1-JFE">
-                                <rect key="frame" x="70" y="271" width="44" height="22"/>
+                                <rect key="frame" x="75" y="271" width="44" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="VHO-3w-PrU">
-                                <rect key="frame" x="126" y="319" width="274" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.27000000000000002" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="VHO-3w-PrU">
+                                <rect key="frame" x="131" y="319" width="269" height="31"/>
+                                <connections>
+                                    <action selector="greenSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="mac-g1-qXQ"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -99,13 +108,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blueLabelField" destination="vbn-Pc-QYv" id="Uhj-ZX-d0z"/>
                         <outlet property="blueSlider" destination="XHl-IZ-2Yh" id="Vxl-Ii-Mra"/>
-                        <outlet property="blueTextField" destination="vbn-Pc-QYv" id="w8v-fe-Gdy"/>
+                        <outlet property="greenLabelField" destination="CcY-CN-Ank" id="kn6-gC-mBr"/>
                         <outlet property="greenSlider" destination="VHO-3w-PrU" id="Nnk-hj-H7w"/>
-                        <outlet property="greenTextField" destination="CcY-CN-Ank" id="0Jr-7c-pUu"/>
                         <outlet property="mainViewPanel" destination="vNs-NC-eTu" id="4TN-ft-lBV"/>
+                        <outlet property="redLabelField" destination="1ZS-c1-JFE" id="dN5-KW-hTh"/>
                         <outlet property="redSlider" destination="T8L-vn-Gyi" id="XOH-zt-OyK"/>
-                        <outlet property="redTextField" destination="1ZS-c1-JFE" id="xvQ-Sl-nWB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

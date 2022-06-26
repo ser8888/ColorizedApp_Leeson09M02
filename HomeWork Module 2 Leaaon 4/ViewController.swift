@@ -8,11 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-// MARK: - IN Outlets
+// MARK: - IB Outlets
     @IBOutlet var mainViewPanel: UIView!
-    @IBOutlet var redTextField: UILabel!
-    @IBOutlet var greenTextField: UILabel!
-    @IBOutlet var blueTextField: UILabel!
+    
+    @IBOutlet var redLabelField: UILabel!
+    @IBOutlet var greenLabelField: UILabel!
+    @IBOutlet var blueLabelField: UILabel!
+    
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
@@ -20,9 +22,50 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        mainViewPanel.layer.cornerRadius = 25
+        setupAllSliders()
+        setupAllLabels()
+        
+        
+        
+        
     }
+//MARK: - IB Auctions
+    
+    @IBAction func redSliderAction() {
+        redLabelField.text = "\(String(format: "%.2f",redSlider.value))"
+    }
+    @IBAction func greenSliderAction() {
+        greenLabelField.text = "\(String(format: "%.2f", greenSlider.value))"
+    }
+    @IBAction func blueSliderAuction() {
+        blueLabelField.text = "\(String(format: "%.2f", blueSlider.value))"
+    }
+    
+    
+    
+    
+//MARK: - Private Methodes
 
-
+    private func setupAllSliders() {
+        redSlider.minimumValue = 0
+        redSlider.maximumValue = 1
+        redSlider.minimumTrackTintColor = .red
+        
+        greenSlider.minimumValue = 0
+        greenSlider.maximumValue = 1
+        greenSlider.minimumTrackTintColor = .green
+        
+        blueSlider.minimumTrackTintColor = .blue
+    }
+    
+    private func setupAllLabels() {
+        redLabelField.text = String(redSlider.value)
+        greenLabelField.text = String(greenSlider.value)
+        blueLabelField.text = String(blueSlider.value)
+    }
+    
+    
+    
 }
 
