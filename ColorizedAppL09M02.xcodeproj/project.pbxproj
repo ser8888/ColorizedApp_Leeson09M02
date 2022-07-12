@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7FFDC2B528682AA00091968A /* HomeWork Module 2 Leaaon 4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HomeWork Module 2 Leaaon 4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FFDC2B528682AA00091968A /* ColorizedAppL09M02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorizedAppL09M02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FFDC2B828682AA00091968A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FFDC2BA28682AA00091968A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7FFDC2BC28682AA00091968A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		7FFDC2AC28682AA00091968A = {
 			isa = PBXGroup;
 			children = (
-				7FFDC2B728682AA00091968A /* HomeWork Module 2 Leaaon 4 */,
+				7FFDC2B728682AA00091968A /* ColorizedAppL09M02 */,
 				7FFDC2B628682AA00091968A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +48,12 @@
 		7FFDC2B628682AA00091968A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7FFDC2B528682AA00091968A /* HomeWork Module 2 Leaaon 4.app */,
+				7FFDC2B528682AA00091968A /* ColorizedAppL09M02.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7FFDC2B728682AA00091968A /* HomeWork Module 2 Leaaon 4 */ = {
+		7FFDC2B728682AA00091968A /* ColorizedAppL09M02 */ = {
 			isa = PBXGroup;
 			children = (
 				7FFDC2B828682AA00091968A /* AppDelegate.swift */,
@@ -64,15 +64,15 @@
 				7FFDC2C328682AA20091968A /* LaunchScreen.storyboard */,
 				7FFDC2C628682AA20091968A /* Info.plist */,
 			);
-			path = "HomeWork Module 2 Leaaon 4";
+			path = ColorizedAppL09M02;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7FFDC2B428682AA00091968A /* HomeWork Module 2 Leaaon 4 */ = {
+		7FFDC2B428682AA00091968A /* ColorizedAppL09M02 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7FFDC2C928682AA20091968A /* Build configuration list for PBXNativeTarget "HomeWork Module 2 Leaaon 4" */;
+			buildConfigurationList = 7FFDC2C928682AA20091968A /* Build configuration list for PBXNativeTarget "ColorizedAppL09M02" */;
 			buildPhases = (
 				7FFDC2B128682AA00091968A /* Sources */,
 				7FFDC2B228682AA00091968A /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = "HomeWork Module 2 Leaaon 4";
+			name = ColorizedAppL09M02;
 			productName = "HomeWork Module 2 Leaaon 4";
-			productReference = 7FFDC2B528682AA00091968A /* HomeWork Module 2 Leaaon 4.app */;
+			productReference = 7FFDC2B528682AA00091968A /* ColorizedAppL09M02.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7FFDC2B028682AA00091968A /* Build configuration list for PBXProject "HomeWork Module 2 Leaaon 4" */;
+			buildConfigurationList = 7FFDC2B028682AA00091968A /* Build configuration list for PBXProject "ColorizedAppL09M02" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7FFDC2B428682AA00091968A /* HomeWork Module 2 Leaaon 4 */,
+				7FFDC2B428682AA00091968A /* ColorizedAppL09M02 */,
 			);
 		};
 /* End PBXProject section */
@@ -289,7 +289,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CC2755AXU3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HomeWork Module 2 Leaaon 4/Info.plist";
+				INFOPLIST_FILE = ColorizedAppL09M02/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +317,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CC2755AXU3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HomeWork Module 2 Leaaon 4/Info.plist";
+				INFOPLIST_FILE = ColorizedAppL09M02/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -339,7 +339,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7FFDC2B028682AA00091968A /* Build configuration list for PBXProject "HomeWork Module 2 Leaaon 4" */ = {
+		7FFDC2B028682AA00091968A /* Build configuration list for PBXProject "ColorizedAppL09M02" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7FFDC2C728682AA20091968A /* Debug */,
@@ -348,7 +348,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7FFDC2C928682AA20091968A /* Build configuration list for PBXNativeTarget "HomeWork Module 2 Leaaon 4" */ = {
+		7FFDC2C928682AA20091968A /* Build configuration list for PBXNativeTarget "ColorizedAppL09M02" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7FFDC2CA28682AA20091968A /* Debug */,
