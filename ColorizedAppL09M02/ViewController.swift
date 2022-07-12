@@ -24,6 +24,17 @@ class ViewController: UIViewController {
         mainViewPanel.layer.cornerRadius = 25
         setupAllSliders()
         setupAllLabels()
+        
+        mainViewPanel.backgroundColor = UIColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha:  1
+        
+        )
+        
+        
+        
     }
 //MARK: - IB Auctions
     
@@ -54,11 +65,10 @@ class ViewController: UIViewController {
     }
     
     private func changeMainPanelColor() {
-        let color = UIColor(red: CGFloat(redSlider.value),
+        mainViewPanel.backgroundColor = UIColor(red: CGFloat(redSlider.value),
                             green: CGFloat(greenSlider.value),
                             blue: CGFloat(blueSlider.value), alpha: 1
         )
-        mainViewPanel.backgroundColor = color
     }
 }
 
