@@ -10,8 +10,6 @@ import UIKit
 protocol ViewControllerDelegate {
     func sendChosenColor(_ chosenColor: UIColor )
 }
-
-
 class ViewController: UIViewController {
 // MARK: - IB Outlets
     @IBOutlet var mainViewPanel: UIView!
@@ -24,6 +22,11 @@ class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    @IBOutlet var redTextField: UITextField!
+    @IBOutlet var greenTextField: UITextField!
+    @IBOutlet var blueTextField: UITextField!
+    
+    
     var backgroundColorFromZeroScreen: UIColor!
     var delegate: ViewControllerDelegate!
     
@@ -33,19 +36,12 @@ class ViewController: UIViewController {
         setupAllSliders()
         setupAllLabels()
         
+//        redTextField.delegate = self
+//        greenTextField.delegate = self
+//        blueTextField.delegate = self
+        
         mainViewPanel.backgroundColor = backgroundColorFromZeroScreen
         mainPanelColorsDecomposition()
- /*
-        mainViewPanel.backgroundColor = UIColor(
-            red: CGFloat(redSlider.value),
-            green: CGFloat(greenSlider.value),
-            blue: CGFloat(blueSlider.value),
-            alpha:  1
-        
-        )
-*/
-        
-        
     }
 //MARK: - IB Auctions
     
@@ -72,13 +68,11 @@ class ViewController: UIViewController {
         greenSlider.minimumTrackTintColor = .green
         blueSlider.minimumTrackTintColor = .blue
     }
-    
     private func setupAllLabels() {
         redLabelField.text = String(redSlider.value)
         greenLabelField.text = String(greenSlider.value)
         blueLabelField.text = String(blueSlider.value)
     }
-    
     private func changeMainPanelColor() {
         mainViewPanel.backgroundColor = UIColor(red: CGFloat(redSlider.value),
                             green: CGFloat(greenSlider.value),
@@ -92,9 +86,16 @@ class ViewController: UIViewController {
         greenSlider.value = Float(CIColor(color: backgroundColorFromZeroScreen).green)
         blueSlider.value = Float(CIColor(color: backgroundColorFromZeroScreen).blue)
         setupAllLabels()
-//        alpha.value = Float(CIColor(color: backgroundColorFromZeroScreen).alpha)
-        }
-    
+
+    }
+    //MARK: - Extension UITextFieldDelegate
+/*
+extension ViewController: UITextFieldDelegate {
+   
+    }
     
 }
+ */
 
+    
+}

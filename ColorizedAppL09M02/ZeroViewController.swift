@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class ZeroViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -20,10 +19,7 @@ class ZeroViewController: UIViewController {
 // MARK: - ViewControllerDelegate
 extension ZeroViewController: ViewControllerDelegate {
     func sendChosenColor(_ chosenColor: UIColor) {
-        
         view.backgroundColor = chosenColor
-        print(chosenColor)
     }
-    
 }
 
