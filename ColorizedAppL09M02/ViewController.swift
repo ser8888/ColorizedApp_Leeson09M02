@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol ViewControllerDelegate {
+    func sendChosenColor(_ chosenColor: UIColor )
+}
+
+
 class ViewController: UIViewController {
 // MARK: - IB Outlets
     @IBOutlet var mainViewPanel: UIView!
@@ -19,12 +24,18 @@ class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    var backgroundColorFromZeroScreen: UIColor!
+    var delegate: ViewControllerDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mainViewPanel.layer.cornerRadius = 25
         setupAllSliders()
         setupAllLabels()
         
+        mainViewPanel.backgroundColor = backgroundColorFromZeroScreen
+        mainPanelColorsDecomposition()
+ /*
         mainViewPanel.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
@@ -32,7 +43,7 @@ class ViewController: UIViewController {
             alpha:  1
         
         )
-        
+*/
         
         
     }
@@ -50,7 +61,11 @@ class ViewController: UIViewController {
         blueLabelField.text = "\(String(format: "%.2f", blueSlider.value))"
         changeMainPanelColor()
     }
-//MARK: - Private Methodes
+    @IBAction func doneButtonTapped() {
+        delegate?.sendChosenColor(mainViewPanel.backgroundColor ?? .white)
+        dismiss(animated: false)
+    }
+    //MARK: - Private Methodes
 
     private func setupAllSliders() {
         redSlider.minimumTrackTintColor = .red
@@ -70,5 +85,16 @@ class ViewController: UIViewController {
                             blue: CGFloat(blueSlider.value), alpha: 1
         )
     }
+    
+    private func mainPanelColorsDecomposition() {
+        
+        redSlider.value = Float(CIColor(color: backgroundColorFromZeroScreen).red)
+        greenSlider.value = Float(CIColor(color: backgroundColorFromZeroScreen).green)
+        blueSlider.value = Float(CIColor(color: backgroundColorFromZeroScreen).blue)
+        setupAllLabels()
+//        alpha.value = Float(CIColor(color: backgroundColorFromZeroScreen).alpha)
+        }
+    
+    
 }
 

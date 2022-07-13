@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Up-kF-S6Y">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,6 +8,29 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Zero View Controller-->
+        <scene sceneID="ewB-Jz-pgn">
+            <objects>
+                <viewController id="O2f-c7-SXl" customClass="ZeroViewController" customModule="ColorizedAppL09M02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zjb-k3-F0C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="C1b-kt-zFI"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ehe-aU-XeE">
+                        <barButtonItem key="rightBarButtonItem" title="color" id="zAM-IR-sOR">
+                            <connections>
+                                <action selector="presButtomGoViewController:" destination="O2f-c7-SXl" id="jy0-xe-JJm"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="showColorSettingIdentifier" modalPresentationStyle="fullScreen" id="2kp-ih-One"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n9X-Lb-Cvn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="733" y="110"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -77,6 +100,16 @@
                                     <action selector="greenSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="mac-g1-qXQ"/>
                                 </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JoB-HE-t5p">
+                                <rect key="frame" x="149" y="612" width="116" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Done">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="doneButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="tKI-nX-TZN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
@@ -98,16 +131,19 @@
                             <constraint firstItem="H7F-qv-dSl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Wlm-T5-GGh"/>
                             <constraint firstItem="CcY-CN-Ank" firstAttribute="top" secondItem="1ZS-c1-JFE" secondAttribute="bottom" constant="30" id="XSg-o9-6qQ"/>
                             <constraint firstItem="vbn-Pc-QYv" firstAttribute="top" secondItem="CcY-CN-Ank" secondAttribute="bottom" constant="30" id="apt-y0-eFt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JoB-HE-t5p" secondAttribute="trailing" constant="149" id="irs-sa-fov"/>
                             <constraint firstItem="XHl-IZ-2Yh" firstAttribute="leading" secondItem="pU4-FQ-R2h" secondAttribute="trailing" constant="76" id="k6m-3M-lCR"/>
                             <constraint firstItem="pU4-FQ-R2h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="n8p-iv-GkT"/>
                             <constraint firstItem="2AM-tp-4KC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pc2-iQ-2Rg"/>
                             <constraint firstItem="H7F-qv-dSl" firstAttribute="top" secondItem="2AM-tp-4KC" secondAttribute="bottom" constant="30" id="pcT-Fw-PRh"/>
                             <constraint firstItem="1ZS-c1-JFE" firstAttribute="leading" secondItem="2AM-tp-4KC" secondAttribute="trailing" constant="22" id="q8A-W5-oro"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JoB-HE-t5p" secondAttribute="bottom" constant="206" id="qq3-Og-eUj"/>
                             <constraint firstItem="vNs-NC-eTu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="tJ9-xL-RVo"/>
                             <constraint firstItem="VHO-3w-PrU" firstAttribute="leading" secondItem="H7F-qv-dSl" secondAttribute="trailing" constant="63" id="uA7-8C-fp3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XHl-IZ-2Yh" secondAttribute="trailing" constant="16" id="uU0-20-dJ1"/>
                             <constraint firstItem="pU4-FQ-R2h" firstAttribute="top" secondItem="H7F-qv-dSl" secondAttribute="bottom" constant="30" id="vdB-np-0Ng"/>
                             <constraint firstItem="vNs-NC-eTu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="vg9-m9-cKB"/>
+                            <constraint firstItem="JoB-HE-t5p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="149" id="y2H-sg-fhy"/>
                         </constraints>
                     </view>
                     <connections>
@@ -122,7 +158,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="79.6875"/>
+            <point key="canvasLocation" x="1552.1739130434785" y="94.419642857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dob-NA-RrL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Up-kF-S6Y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b6c-RM-8MS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="O2f-c7-SXl" kind="relationship" relationship="rootViewController" id="MOo-4X-aWd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ray-Gh-gug" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-62.318840579710148" y="109.82142857142857"/>
         </scene>
     </scenes>
     <resources>
