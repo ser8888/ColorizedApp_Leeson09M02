@@ -177,14 +177,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="blueLabelField" destination="vbn-Pc-QYv" id="Uhj-ZX-d0z"/>
+                        <outlet property="blueLabel" destination="vbn-Pc-QYv" id="Uhj-ZX-d0z"/>
                         <outlet property="blueSlider" destination="XHl-IZ-2Yh" id="Vxl-Ii-Mra"/>
                         <outlet property="blueTextField" destination="8bC-Xf-vdC" id="UOm-Hb-V0x"/>
-                        <outlet property="greenLabelField" destination="CcY-CN-Ank" id="kn6-gC-mBr"/>
+                        <outlet property="greenLabel" destination="CcY-CN-Ank" id="kn6-gC-mBr"/>
                         <outlet property="greenSlider" destination="VHO-3w-PrU" id="Nnk-hj-H7w"/>
                         <outlet property="greenTextField" destination="8bC-Xf-vdC" id="TYg-wF-atn"/>
                         <outlet property="mainViewPanel" destination="vNs-NC-eTu" id="4TN-ft-lBV"/>
-                        <outlet property="redLabelField" destination="1ZS-c1-JFE" id="dN5-KW-hTh"/>
+                        <outlet property="redLabel" destination="1ZS-c1-JFE" id="dN5-KW-hTh"/>
                         <outlet property="redSlider" destination="T8L-vn-Gyi" id="XOH-zt-OyK"/>
                         <outlet property="redTextField" destination="8bC-Xf-vdC" id="TwD-No-sVA"/>
                     </connections>
