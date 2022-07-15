@@ -10,7 +10,7 @@ import UIKit
 protocol ViewControllerDelegate {
     func sendChosenColor(_ chosenColor: UIColor )
 }
-class ViewController: UIViewController {
+class ColorViewController: UIViewController {
 // MARK: - IB Outlets
     @IBOutlet var mainViewPanel: UIView!
     
@@ -41,6 +41,7 @@ class ViewController: UIViewController {
 //        blueTextField.delegate = self
         
         mainViewPanel.backgroundColor = backgroundColorFromZeroScreen
+        
         mainPanelColorsDecomposition()
     }
 //MARK: - IB Auctions
@@ -69,9 +70,13 @@ class ViewController: UIViewController {
         blueSlider.minimumTrackTintColor = .blue
     }
     private func setupAllLabels() {
-        redLabelField.text = String(redSlider.value)
-        greenLabelField.text = String(greenSlider.value)
-        blueLabelField.text = String(blueSlider.value)
+        redLabelField.text = "\(String(format: "%.2f",redSlider.value))"
+        greenLabelField.text = "\(String(format: "%.2f", greenSlider.value))"
+        blueLabelField.text = "\(String(format: "%.2f", blueSlider.value))"
+        
+//        redLabelField.text = String(redSlider.value)
+//        greenLabelField.text = String(greenSlider.value)
+//        blueLabelField.text = String(blueSlider.value)
     }
     private func changeMainPanelColor() {
         mainViewPanel.backgroundColor = UIColor(red: CGFloat(redSlider.value),
@@ -85,6 +90,7 @@ class ViewController: UIViewController {
         redSlider.value = Float(CIColor(color: backgroundColorFromZeroScreen).red)
         greenSlider.value = Float(CIColor(color: backgroundColorFromZeroScreen).green)
         blueSlider.value = Float(CIColor(color: backgroundColorFromZeroScreen).blue)
+        
         setupAllLabels()
 
     }

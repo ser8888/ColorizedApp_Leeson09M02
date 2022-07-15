@@ -7,17 +7,17 @@
 
 import UIKit
 
-class ZeroViewController: UIViewController {
+class MainViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "showColorSettingIdentifier" else { return }
-        guard let destination = segue.destination as? ViewController else { return }
+ //       guard segue.identifier == "showColorSettingIdentifier" else { return }
+        guard let destination = segue.destination as? ColorViewController else { return }
         destination.delegate = self
         destination.backgroundColorFromZeroScreen = view.backgroundColor
     }
 }
 // MARK: - ViewControllerDelegate
-extension ZeroViewController: ViewControllerDelegate {
+extension MainViewController: ViewControllerDelegate {
     func sendChosenColor(_ chosenColor: UIColor) {
         view.backgroundColor = chosenColor
     }

@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7FE5277F287DF16F00E075D6 /* ZeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE5277E287DF16E00E075D6 /* ZeroViewController.swift */; };
+		7FE5277F287DF16F00E075D6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE5277E287DF16E00E075D6 /* MainViewController.swift */; };
 		7FFDC2B928682AA00091968A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFDC2B828682AA00091968A /* AppDelegate.swift */; };
 		7FFDC2BB28682AA00091968A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFDC2BA28682AA00091968A /* SceneDelegate.swift */; };
-		7FFDC2BD28682AA00091968A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFDC2BC28682AA00091968A /* ViewController.swift */; };
+		7FFDC2BD28682AA00091968A /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFDC2BC28682AA00091968A /* ColorViewController.swift */; };
 		7FFDC2C028682AA00091968A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FFDC2BE28682AA00091968A /* Main.storyboard */; };
 		7FFDC2C228682AA20091968A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FFDC2C128682AA20091968A /* Assets.xcassets */; };
 		7FFDC2C528682AA20091968A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FFDC2C328682AA20091968A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7FE5277E287DF16E00E075D6 /* ZeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroViewController.swift; sourceTree = "<group>"; };
+		7FE5277E287DF16E00E075D6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7FFDC2B528682AA00091968A /* ColorizedAppL09M02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorizedAppL09M02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FFDC2B828682AA00091968A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FFDC2BA28682AA00091968A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7FFDC2BC28682AA00091968A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7FFDC2BC28682AA00091968A /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		7FFDC2BF28682AA00091968A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7FFDC2C128682AA20091968A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FFDC2C428682AA20091968A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,8 +60,8 @@
 			children = (
 				7FFDC2B828682AA00091968A /* AppDelegate.swift */,
 				7FFDC2BA28682AA00091968A /* SceneDelegate.swift */,
-				7FFDC2BC28682AA00091968A /* ViewController.swift */,
-				7FE5277E287DF16E00E075D6 /* ZeroViewController.swift */,
+				7FFDC2BC28682AA00091968A /* ColorViewController.swift */,
+				7FE5277E287DF16E00E075D6 /* MainViewController.swift */,
 				7FFDC2BE28682AA00091968A /* Main.storyboard */,
 				7FFDC2C128682AA20091968A /* Assets.xcassets */,
 				7FFDC2C328682AA20091968A /* LaunchScreen.storyboard */,
@@ -141,9 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FFDC2BD28682AA00091968A /* ViewController.swift in Sources */,
+				7FFDC2BD28682AA00091968A /* ColorViewController.swift in Sources */,
 				7FFDC2B928682AA00091968A /* AppDelegate.swift in Sources */,
-				7FE5277F287DF16F00E075D6 /* ZeroViewController.swift in Sources */,
+				7FE5277F287DF16F00E075D6 /* MainViewController.swift in Sources */,
 				7FFDC2BB28682AA00091968A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
