@@ -7,9 +7,9 @@
 
 import UIKit
 
-protocol ViewControllerDelegate {
-    func sendChosenColor(_ chosenColor: UIColor )
-}
+//protocol ViewControllerDelegate {
+//    func sendChosenColor(_ chosenColor: UIColor )
+//}
 class ColorViewController: UIViewController {
 // MARK: - IB Outlets
     @IBOutlet var mainViewPanel: UIView!
@@ -27,25 +27,29 @@ class ColorViewController: UIViewController {
     @IBOutlet var blueTextField: UITextField!
     
     
-    var backgroundColorFromZeroScreen: UIColor!
-    var delegate: ViewControllerDelegate!
+    var sendColorFromMain: UIColor!
+    var delegate: ColorViewControllerDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         mainViewPanel.layer.cornerRadius = 25
+        
         setupAllSliders()
         setupAllLabels()
+        
+        mainViewPanel.backgroundColor = sendColorFromMain
+        
+        mainPanelColorsDecomposition()
         
 //        redTextField.delegate = self
 //        greenTextField.delegate = self
 //        blueTextField.delegate = self
         
-        mainViewPanel.backgroundColor = backgroundColorFromZeroScreen
-        
-        mainPanelColorsDecomposition()
+
     }
 //MARK: - IB Auctions
-    
+   /*
     @IBAction func redSliderAction() {
         redLabelField.text = "\(String(format: "%.2f",redSlider.value))"
         changeMainPanelColor()
@@ -58,9 +62,30 @@ class ColorViewController: UIViewController {
         blueLabelField.text = "\(String(format: "%.2f", blueSlider.value))"
         changeMainPanelColor()
     }
+   */
+    
+    @IBAction func rgbSlider(_ sender: Any) {
+        mainViewPanel.backgroundColor = UIColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: 1
+        )
+        
+        redLabelField.text = "\(String(format: "%.2f",redSlider.value))"
+        greenLabelField.text = "\(String(format: "%.2f", greenSlider.value))"
+        blueLabelField.text = "\(String(format: "%.2f", blueSlider.value))"
+        
+        
+    }
+    
+    
+    
+    
+    
     @IBAction func doneButtonTapped() {
         delegate?.sendChosenColor(mainViewPanel.backgroundColor ?? .white)
-        dismiss(animated: false)
+        dismiss(animated: true)
     }
     //MARK: - Private Methodes
 
@@ -87,9 +112,9 @@ class ColorViewController: UIViewController {
     
     private func mainPanelColorsDecomposition() {
         
-        redSlider.value = Float(CIColor(color: backgroundColorFromZeroScreen).red)
-        greenSlider.value = Float(CIColor(color: backgroundColorFromZeroScreen).green)
-        blueSlider.value = Float(CIColor(color: backgroundColorFromZeroScreen).blue)
+        redSlider.value = Float(CIColor(color: sendColorFromMain).red)
+        greenSlider.value = Float(CIColor(color: sendColorFromMain).green)
+        blueSlider.value = Float(CIColor(color: sendColorFromMain).blue)
         
         setupAllLabels()
 
